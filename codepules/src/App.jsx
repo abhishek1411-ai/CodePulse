@@ -1,36 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import Header from './componants/layout/Header';
+import Home from './home';
+import {ToastContainer,toast} from 'react-toastify'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const to = () => {
+  toast.success('success')
+}
+  return(
+    <div>
+    <button onClick={to}>click me</button>
+   
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <marquee><h1>ABHISHEK</h1>
-      [</marquee>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Header/>
+      <Home/>
+
+      <ToastContainer/>
+
+   </div> 
   )
 }
 
-export default App
