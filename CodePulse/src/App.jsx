@@ -29,7 +29,7 @@ export default function App() {
 
       <ToastContainer/>
 
-      <BrowserRouter>
+      <BrowserRouter basename="/CodePulse">
         <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
